@@ -3,8 +3,8 @@
 
 /* CSS Variables */
 :root {
-    --BgColor : #fff3b7;
-    --MainColor : #1a237e;
+    --BgColor : #fffceb;
+    --MainColor : #0353A4;
     --SecondColor : #9ea8db;
     --FooterColor : rgb(255, 234, 131, 0.7);
 }
@@ -18,7 +18,7 @@
 body {
     background-color: var(--BgColor);
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Container of home page which has title, subtitle, and button */
@@ -147,10 +147,8 @@ div .wrong_answer {
 
 /* Footer */
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+    text-align: center;
+    position: fixed;
     bottom: 0;
     width: -webkit-fill-available;
     background-color: var(--FooterColor);
