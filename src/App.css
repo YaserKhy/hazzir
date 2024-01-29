@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+/* import font : Luckiest Guy and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@500&display=swap');
+
+/* CSS Variables */
+:root {
+    --BgColor : #fff3b7;
+    --MainColor : #1a237e;
+    --SecondColor : #9ea8db;
+    --FooterColor : rgb(255, 234, 131, 0.7);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    /* Set that font for all content */
+    font-family: 'Poppins', 'Sans Serif'
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Body tag */
+body {
+    background-color: var(--BgColor);
+    margin: 0;
+    overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Container of home page which has title, subtitle, and button */
+.home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* HAZZIR */
+.title {
+    font-family: 'Luckiest Guy', 'Cursive';
+    font-size: 7rem;
+    color: var(--MainColor);
+    letter-spacing: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Phrase under HAZZIR */
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--MainColor);
+}
+
+/* All anchors */
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+}
+
+/* Primary button and secondary button */
+div .primar, div .scnd, div .quitbtn {
+    border-radius: 1rem;
+    border: 0;
+    width: fit-content;
+    height: 2.5rem;
+    min-width: 10rem;
+    letter-spacing: 0.05rem;
+    padding: 0rem 1rem;
+}
+
+/* Primary button */
+div .primar {
+    background-color: var(--MainColor);
+}
+
+/* Container of categories page which has categories, play and back button */
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* The categories buttons group */
+div .catbtngrp {
+    display: flex;
+}
+
+/* Each category button */
+div .catbtn {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+    margin: 1rem;
+    border-radius: 50% !important;
+    background-color: var(--MainColor);
+    font-size: 1.2rem;
+}
+
+/* Each question */
+div .question {
+    background-color: var(--MainColor);
+    color: var(--BgColor);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60rem;
+}
+
+/* All options */
+div .option {
+    background-color: var(--SecondColor);
+    border: 0.2rem solid var(--MainColor);
+    border-radius: 1rem;
+    color: black;
+    width: 20rem;
+    height: fit-content;
+    min-height: 3rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+div .option:hover {
+    border-color: var(--MainColor);
+}
+div .option:disabled {
+    border-color: var(--MainColor);
+}
+
+/* correct answer */
+div .correct_answer {
+    background-color: green !important;
+}
+
+/* wrong answer */
+div .wrong_answer {
+    background-color: red !important;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+    background-color: var(--FooterColor);
+    height: 2rem;
+    color: var(--MainColor);
+}
+
+/* PHONE STYLING */
+@media (max-width:1023px) {
+    /* .home { min-height: 90vh; } */
+
+    .title { font-size: 4rem; letter-spacing: 1rem; text-indent: 1rem; }
+
+    .categories {min-height: 100vh;}
+
+    .btn-group>.btn { flex: 0 0 auto; }
+
+    div .catbtngrp { flex-wrap: wrap; justify-content: center; align-items: center;}
+
+    div .catbtn {padding: 3.5rem; margin: 1rem 0.68rem !important; font-size: 1rem;}
+
+    div .labels {font-size: 1rem;}
+
+    div .question { padding: 1rem; width: 20rem; font-size: 1.2rem; }
 }
