@@ -5,7 +5,7 @@
 :root {
     --BgColor : #fffceb;
     --MainColor : #0353A4;
-    --SecondColor : #9ea8db;
+    --SecondColor : #b9d6f2;
     --FooterColor : rgb(255, 243, 183, 0.7);
 }
 
@@ -73,6 +73,16 @@ div .primar {
     background-color: var(--MainColor);
 }
 
+div .scnd {
+    background-color: var(--SecondColor);
+    color: var(--MainColor);
+}
+
+div .scnd:hover {
+    background-color: #beddfa;
+    color: var(--MainColor);
+}
+
 /* Container of categories page which has categories, play and back button */
 .categories {
     display: flex;
@@ -102,12 +112,15 @@ div .catbtn {
     font-size: 1.2rem;
 }
 
-.btn-check:checked+.btn {
-    background-color: var(--SecondColor) !important;
-    border-color: var(--SecondColor);
-    border: inherit solid transparent;
-    color: #1a237e;
+.btn-check:hover+.btn {
+    background-color: var(--MainColor);
 }
+
+.btn-check:checked+.btn {
+    background-color: #0577e9;
+    border-color: #0577e9;
+}
+
 
 div .labels {
     color: var(--MainColor);
@@ -133,7 +146,7 @@ div .option {
     background-color: var(--SecondColor);
     border: 0.2rem solid var(--MainColor);
     border-radius: 1rem;
-    color: black;
+    color: var(--MainColor);
     width: 20rem;
     height: fit-content;
     min-height: 3rem;
@@ -185,4 +198,6 @@ div .wrong_answer {
     div .labels {font-size: 0.7rem;}
 
     div .question { padding: 1rem; width: 20rem; font-size: 1rem;}
+
+    div .option {font-size: 0.8rem;}
 }
