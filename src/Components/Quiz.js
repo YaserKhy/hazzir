@@ -13,7 +13,6 @@ function Quiz({ questions, score, setScore }) {
     const shuffleOptions = (optionsArray) => {
         for (let i = 0; i < optionsArray.length; i++) {
             // decode each option from base64 to binary
-            console.log(optionsArray[i])
             optionsArray[i] = atob(optionsArray[i])
         }
         return optionsArray.sort(() => Math.random() - 0.5)

@@ -6,7 +6,7 @@
     --BgColor : #fffceb;
     --MainColor : #0353A4;
     --SecondColor : #9ea8db;
-    --FooterColor : rgb(255, 234, 131, 0.7);
+    --FooterColor : rgb(255, 243, 183, 0.7);
 }
 
 * {
@@ -102,11 +102,23 @@ div .catbtn {
     font-size: 1.2rem;
 }
 
+.btn-check:checked+.btn {
+    background-color: var(--SecondColor) !important;
+    border-color: var(--SecondColor);
+    border: inherit solid transparent;
+    color: #1a237e;
+}
+
+div .labels {
+    color: var(--MainColor);
+}
+
 /* Each question */
 div .question {
-    background-color: var(--MainColor);
-    color: var(--BgColor);
+    background-color: var(--FooterColor);
+    color: var(--MainColor);
     padding: 1rem;
+    border: 0.2rem solid var(--MainColor);
     border-radius: 1rem;
     margin-bottom: 2rem;
     display: flex;
@@ -168,9 +180,9 @@ div .wrong_answer {
 
     div .catbtngrp { flex-wrap: wrap; justify-content: center; align-items: center;}
 
-    div .catbtn {padding: 3.5rem; margin: 1rem 0.68rem !important; font-size: 1rem;}
+    div .catbtn {padding: 3rem; margin: 1rem 0.68rem !important; font-size: 0.8rem;}
 
-    div .labels {font-size: 1rem;}
+    div .labels {font-size: 0.7rem;}
 
-    div .question { padding: 1rem; width: 20rem; font-size: 1.2rem; }
+    div .question { padding: 1rem; width: 20rem; font-size: 1rem;}
 }
