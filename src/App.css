@@ -39,8 +39,8 @@ body {
     letter-spacing: 1.5rem;
 }
 
-/* Phrase under HAZZIR */
-#subtitle {
+/* Like phrase under HAZZIR */
+.subtitle {
     font-size: 1.5rem;
     color: var(--MainColor);
 }
@@ -73,11 +73,11 @@ div .primar {
     background-color: var(--MainColor);
 }
 
+/* Secondary button */
 div .scnd {
     background-color: var(--SecondColor);
     color: var(--MainColor);
 }
-
 div .scnd:hover {
     background-color: #beddfa;
     color: var(--MainColor);
@@ -121,8 +121,8 @@ div .catbtn {
     border-color: #0577e9;
 }
 
-
-div .labels {
+/* Question number and category */
+div .NumAndCat {
     color: var(--MainColor);
 }
 
@@ -158,16 +158,26 @@ div .option:hover {
 }
 div .option:disabled {
     border-color: var(--MainColor);
+    background-color: #61a0f7;
+    opacity: 1;
+}
+
+/* Next question button */
+div #nextq {
+    opacity: 1;
+}
+div #nextq:disabled {
+    background: #787878;
 }
 
 /* correct answer */
 div .correct_answer {
-    background-color: green !important;
+    background-color: #59ab52 !important;
 }
 
 /* wrong answer */
 div .wrong_answer {
-    background-color: red !important;
+    background-color: #ff5852 !important;
 }
 
 /* Footer */
@@ -183,10 +193,10 @@ div .wrong_answer {
 
 /* PHONE STYLING */
 @media (max-width:1023px) {
-    body {background-image: url(..//public/bg2.jpg);}
+    body {background-image: none; background-color: var(--BgColor);}
 
     #title { font-size: 4rem; letter-spacing: 1rem; text-indent: 1rem; }
-    #subtitle { background-color: red; width: auto !important; }
+    .subtitle { width: auto !important; }
     #LogoTitle {flex-direction: column;}
 
     .categories {min-height: 100vh;}
@@ -197,7 +207,7 @@ div .wrong_answer {
 
     div .catbtn {padding: 3rem; margin: 1rem 0.68rem !important; font-size: 0.8rem;}
 
-    div .labels {font-size: 0.7rem;}
+    div .NumAndCat {font-size: 0.7rem;}
 
     div .question { padding: 1rem; width: 20rem; font-size: 1rem;}
 

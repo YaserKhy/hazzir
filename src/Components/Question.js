@@ -34,7 +34,7 @@ function Question({ questions, currentOptions, currentQuestion, score, setScore,
 
     return (
         <Container className='d-flex justify-content-center align-items-center flex-column' style={{ fontSize: '1.5rem' }}>
-            <Container className='d-flex justify-content-around m-2 labels'>
+            <Container className='d-flex justify-content-around m-2 NumAndCat'>
                 <p>Question {currentQuestion + 1}/10</p>
                 <p>Category : {atob(questions[currentQuestion].category)}</p>
             </Container>

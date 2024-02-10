@@ -15,7 +15,7 @@ function Home({ setQuestions, setScore, setCategory }) {
                 <Image className='me-3' src={`${process.env.PUBLIC_URL}/Logo2.png`} alt='HazzirLogo' width={110} height={110} />
                 <h1 id='title'> HAZZIR </h1>
             </Container>
-            <p id='subtitle' className='w-25 mb-5 text-center' style={{lineHeight:'0rem', borderBottom:'1px solid var(--MainColor)'}}><span className='px-2' style={{background:'var(--BgColor)'}}> The fun quiz game </span></p>
+            <p className='subtitle w-25 mb-5 text-center' style={{lineHeight:'0rem', borderBottom:'1px solid var(--MainColor)'}}><span className='px-2' style={{background:'var(--BgColor)'}}> The fun quiz game </span></p>
             <Link to='/categories'><Button className='primar mt-3'>Start</Button></Link>
         </Container>
     )

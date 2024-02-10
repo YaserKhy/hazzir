@@ -43,7 +43,7 @@ function Quiz({ questions, score, setScore }) {
                         <Question questions={questions} currentOptions={currentOptions} currentQuestion={currentQuestion} score={score} setScore={setScore} selected={selected} setSelected={setSelected} />
                         <Row className='mt-5'>
                             <Col><Link to='/'><Button variant='danger' className='quitbtn'>Quit</Button></Link></Col>
-                            {currentQuestion !== 9 && <Col><Button className='primar' onClick={handleNext} disabled={!selected}> Next Question </Button></Col>}
+                            {currentQuestion !== 9 && <Col><Button id='nextq' className='primar' onClick={handleNext} disabled={!selected}> Next Question </Button></Col>}
 
                             {/* When last question is reached, direct to score page */}
                             {currentQuestion === 9 && <Col><Link to='/score' disabled={!selected}><Button className='primar' disabled={!selected}> View Score </Button></Link></Col>}
