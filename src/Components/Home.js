@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap'
+import { Button, Container, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-function Home({setQuestions, setScore, setCategory}) {
-    
+function Home({ setQuestions, setScore, setCategory }) {
+
     // Reset some states to its initial value.
     setQuestions();
     setScore(0);
@@ -11,9 +11,12 @@ function Home({setQuestions, setScore, setCategory}) {
 
     return (
         <Container className='home'>
-            <h1 className='title'> HAZZIR </h1>
-            <p className='subtitle mb-5'> The fun quiz game </p>
-            <Link to='/categories'><Button className='primar'>Start</Button></Link>
+            <Container fluid id='LogoTitle' className='d-flex justify-content-center align-items-center ps-4 mb-3'>
+                <Image className='me-3' src={`${process.env.PUBLIC_URL}/Logo2.png`} alt='HazzirLogo' width={110} height={110} />
+                <h1 id='title'> HAZZIR </h1>
+            </Container>
+            <p id='subtitle' className='w-25 mb-5 text-center' style={{lineHeight:'0rem', borderBottom:'1px solid var(--MainColor)'}}><span className='px-2' style={{background:'var(--BgColor)'}}> The fun quiz game </span></p>
+            <Link to='/categories'><Button className='primar mt-3'>Start</Button></Link>
         </Container>
     )
 }
